@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="818.0" prefWidth="1162.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ToyLanguageController">
+    <children>
+        <ListView fx:id="programsList" layoutX="14.0" layoutY="75.0" prefHeight="548.0" prefWidth="375.0" />
+        <Text fill="WHITE" layoutX="14.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Programs Available" textAlignment="CENTER" wrappingWidth="209.0" />
+        <Button fx:id="runBtn" layoutX="70.0" layoutY="659.0" mnemonicParsing="false" onAction="#runOneStepForAll" style="-fx-background-color: white;" text="Run One Step" textAlignment="CENTER" textFill="#ccbbdd">
+            <font>
+                <Font name="Optima Regular" size="13.0" />
+            </font>
+        </Button>
+        <ListView fx:id="prgStatesList" layoutX="424.0" layoutY="393.0" prefHeight="230.0" prefWidth="200.0" />
+        <ListView fx:id="outList" layoutX="907.0" layoutY="113.0" prefHeight="230.0" prefWidth="200.0" />
+        <ListView fx:id="fileList" layoutX="907.0" layoutY="393.0" prefHeight="230.0" prefWidth="200.0" />
+        <ListView fx:id="exeStackList" layoutX="424.0" layoutY="113.0" prefHeight="230.0" prefWidth="200.0" />
+        <TableView fx:id="symTable" layoutX="664.0" layoutY="113.0" prefHeight="230.0" prefWidth="200.0">
+            <columns>
+                <TableColumn fx:id="varNameColumn" prefWidth="75.0" text="Var Name" />
+                <TableColumn fx:id="symValueColumn" prefWidth="75.0" text="Value" />
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+        </TableView>
+        <TableView fx:id="heapTable" layoutX="664.0" layoutY="393.0" prefHeight="230.0" prefWidth="200.0">
+            <columns>
+                <TableColumn fx:id="addressColumn" prefWidth="75.0" text="Address" />
+                <TableColumn fx:id="heapValueColumn" prefWidth="75.0" text="Value" />
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+        </TableView>
+        <Text fill="WHITE" layoutX="719.0" layoutY="376.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Heap Table" textAlignment="CENTER" />
+        <Text fill="WHITE" layoutX="473.0" layoutY="376.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Program States" textAlignment="CENTER" />
+        <Text fill="WHITE" layoutX="989.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Output" textAlignment="CENTER" />
+        <Text fill="WHITE" layoutX="979.0" layoutY="376.0" strokeType="OUTSIDE" strokeWidth="0.0" text="File Table" textAlignment="CENTER" wrappingWidth="67.59114837646484" />
+        <Text fill="WHITE" layoutX="719.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Symbol Table" textAlignment="CENTER" />
+        <Text fill="WHITE" layoutX="465.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Execution Stack" textAlignment="CENTER" />
+        <TextField fx:id="progStatesNumField" layoutX="642.0" layoutY="20.0" />
+        <Text fill="WHITE" layoutX="448.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Program States:" />
+    </children>
+    <opaqueInsets>
+        <Insets />
+    </opaqueInsets>
+</AnchorPane>
